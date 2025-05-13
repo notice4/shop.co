@@ -27,7 +27,10 @@
             url(../fonts/Satoshi/Satoshi-Regular.woff) format('woff'),
             url(../fonts/Satoshi/Satoshi-Regular.ttf) format('truetype'),
             url(../fonts/Satoshi/Satoshi-Regular.eot) format('embedded-opentype'),
-            url(../fonts/Satoshi/Satoshi-Regular.svg#Satoshi) format('svg');
+            url(../fonts/Satoshi/Satoshi-Regular.svg#Satoshi) format('svg')
+            url(../fonts/Satoshi/Satoshi-Bold.woff2) format('woff2'),
+            url(../fonts/Satoshi/Satoshi-Bold.woff) format('woff');
+    font-weight: bold;
     font-weight: normal;
     font-style: normal;
 }
