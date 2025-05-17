@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'Integral CF';
-    src: url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.otf)format('opentype'),
-            url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.woff2)format('woff2'),
-            url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.woff)format('woff'),
-            url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.ttf)format('truetype'),
+    src: url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.woff2)format('woff2'),
+        url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.woff)format('woff'),
+        url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.ttf)format('truetype'),
             url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.svg#IntegralCF)format('svg'),
             url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.eot)format('embedded-opentype'),
             url(../fonts/IntegralCF/Fontspring-DEMO-integralcf-bold.eot?#iefix)format('embedded-opentype'),
@@ -27,10 +26,9 @@
             url(../fonts/Satoshi/Satoshi-Regular.woff) format('woff'),
             url(../fonts/Satoshi/Satoshi-Regular.ttf) format('truetype'),
             url(../fonts/Satoshi/Satoshi-Regular.eot) format('embedded-opentype'),
-            url(../fonts/Satoshi/Satoshi-Regular.svg#Satoshi) format('svg')
+            url(../fonts/Satoshi/Satoshi-Regular.svg#Satoshi) format('svg'),
             url(../fonts/Satoshi/Satoshi-Bold.woff2) format('woff2'),
             url(../fonts/Satoshi/Satoshi-Bold.woff) format('woff');
-    font-weight: bold;
     font-weight: normal;
     font-style: normal;
 }
