@@ -584,6 +584,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-self: center;
+    gap: clamp(16px, 3vw, 19px);
     margin: 40px 100px;
 }
 
@@ -633,6 +634,8 @@ main {
 }
 
 
+
+
 @media (max-width: 1440px) and (min-width: 1190px) {
 .top-selling {
     display: flex;
@@ -672,5 +675,6 @@ main {
     width: 100%;
     position: static;
 }
+
 }
 
