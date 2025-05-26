@@ -320,7 +320,6 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 0 99px;
     margin-top: 50px;
 }
 
@@ -462,6 +461,15 @@ main {
     font-family: 'Satoshi';
 }
 
+.new-arrivals-box,
+.top-selling-box {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 5vw, 80px); /* адаптивные отступы слева и справа */
+  box-sizing: border-box;
+}
+
 .title-top-selling {
     position: relative;
     width: 100%;
@@ -482,7 +490,6 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 0 99px;
     margin-top: 50px;
 }
 
@@ -555,6 +562,11 @@ main {
   border-radius: 20px;
 }
 
+.our-happy-customers {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
 .our-happy-customers-title {
     max-width: 654px;
     width: 100%;
@@ -633,6 +645,7 @@ main {
     gap: 8px;
 }
 
+
 .footer-top-box {
     max-width: 1240px;
     width: 100%;
@@ -710,8 +723,7 @@ main {
 }
 
 .footer-first-box{
-    max-width: 1440px;
-    width: 100%;
+    max-width: 100%;
     background-color: #F0F0F0;
     /* margin-top: 170px; */
     padding: 10vw 7vw;
@@ -722,8 +734,7 @@ main {
 }
 
 .footer-second-box {
-    max-width: 1440px;
-    width: 100%;
+    max-width: 100%;
     background-color: #F0F0F0;
     padding: 25px 100px;
     display: flex;
@@ -789,6 +800,32 @@ main {
     gap: 26px;
 }
 
+.all-link-boxes {
+    max-width: 880px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 113px;
+}
+
+.company-help-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 113px;
+}
+
+.faq-resources-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 113px;
+}
+
 .line3-div {
     width: 100%;
     position: relative;
@@ -816,14 +853,55 @@ main {
     display: inline-block;
 }
 
-@media (max-width: 1440px) and (min-width: 1190px) {
+
+@media (max-width: 1440px) and (min-width: 1281px) {
+    /* header */
+}
+
+@media (max-width: 1350px) and (min-width: 1025px) {
+    /* header */
+.header-box {
+    max-width: 1040px;
+    margin: auto;
+    margin-top: 24px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+/* info and title boxes */
+
+.title-box .info-box {
+    max-width: 50%;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+}
+
+.title-box .info-box .box .number{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: clamp(20px, 4vw, 30px);
+    color: #000;
+    font-family: 'Satoshi', sans-serif;
+}
+
+/* new arrivals, top selling, browse by dress */
 .top-selling {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 0 99px;
+    margin: 0 20px;
     margin-top: 50px;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -835,7 +913,7 @@ main {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 0 99px;
+    margin: 0 20px;
     margin-top: 50px;
     overflow-x: auto;
     scroll-behavior: smooth;
@@ -856,5 +934,71 @@ main {
     position: static;
 }
 
+/* our happy customers - pass*/
+
+/* footer */
+
+.footer-first-box {
+    max-width: 100%;
+    background-color: #F0F0F0;
+    padding: 10vw 7vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7.5vw;
 }
 
+.all-link-boxes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
+}
+
+.company-help-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.faq-resources-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-top-box, .footer-top-title, .email-and-button {
+    border: 1px red solid;
+    width: 90%;
+}
+
+.email-and-button {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-top-title {
+    max-width: 551px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    font-size: 40px;
+    line-height: 45px;
+    display: inline-block;
+    font-family: 'Integral CF';
+    color: #fff;
+    text-align: left;
+}
+
+
+}
