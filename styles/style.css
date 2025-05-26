@@ -973,7 +973,6 @@ main {
 }
 
 .footer-top-box, .footer-top-title, .email-and-button {
-    border: 1px red solid;
     width: 90%;
 }
 
