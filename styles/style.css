@@ -608,7 +608,7 @@ main {
     margin: 40px 100px;
 }
 
-.revision-box {
+.revision-first-box, .revision-second-box, .revision-third-box {
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 28px 32px;
@@ -1006,6 +1006,124 @@ main {
     color: #fff;
     text-align: left;
 }
+}
+
+@media (max-width: 1033px) and (min-width: 769px) {
+    /* header */
+.header-box {
+        max-width: 100%;
+        margin: auto;
+        margin-top: 24px;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+}
+
+.navigation {
+        display: none;
+}
+
+.search-box {
+    max-width: 400px;
+}
+
+/* info and title boxes */
+
+/* new arrivals and top selling */
+
+.sleeve-striped-tshirt, .faded_skinny_jeans, .checkered_shirt, .loose_fit_bermuda_shorts{
+    display: none;
+}
+
+
+.top-selling-box, .new-arrivals-box {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-inline: clamp(16px, 5vw, 40px);
+}
+.top-selling {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.new-arrivals {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.browse-by-dress-parent-box >*{
+    width: 100%;
+    position: static;
+}
+
+/* our happy costomers */
+.revision-second-box, .revision-third-box {
+    display: none;
+}
+
+.revision-first-box {
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    padding: 28px 32px;
+    gap: 19px;
+}
+
+.title-and-arrows {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    gap: 0;  
+
+}
+
+.our-happy-customers-title {
+    margin: 0;
+    padding: 0; 
+    position: relative;
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    font-size: 48px;
+    line-height: 36px;
+    display: flex;
+    font-family: 'Integral CF';
+    color: #000;
+    text-align: left;
+}
+
+.arrows {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 100px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
 
 
 }
