@@ -325,16 +325,14 @@ main {
 
 .clothes-box {
     max-width: 100%;
-    width: 300px;
+    width: 310px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 8px;
-    /* flex-shrink: 0;
-
-    border: 10px solid transparent;
+    border: 7px solid transparent;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .vertical-stript-shirt, .courage_graphic_tshirt, .loose_fit_bermuda_shorts, .faded_skinny_jeans{
@@ -866,7 +864,7 @@ main {
     /* header */
 }
 
-@media (max-width: 1350px) and (min-width: 1034px) {
+@media (max-width: 1350px) and (min-width: 1060px) {
     /* header */
 .header-box {
     max-width: 1040px;
@@ -1008,7 +1006,7 @@ main {
 }
 }
 
-@media (max-width: 1033px) and (min-width: 769px) {
+@media (max-width: 1060px) and (min-width: 800px) {
     /* header */
 .header-box {
         max-width: 100%;
@@ -1032,10 +1030,23 @@ main {
 
 /* info and title boxes */
 
+
+.brands {
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 43px;
+    background-color: black;
+}
+
 /* new arrivals and top selling */
 
 .sleeve-striped-tshirt, .faded_skinny_jeans, .checkered_shirt, .loose_fit_bermuda_shorts{
-    display: none;
+    display: block;
 }
 
 
@@ -1049,7 +1060,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 25px;
 }
@@ -1059,7 +1070,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 25px;
 }
@@ -1124,6 +1135,60 @@ main {
     flex-direction: row;
 }
 
+/* footer */
 
+.footer-top-box, .footer-top-title, .email-and-button {
+    width: 90%;
+}
+
+.email-and-button {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-top-title {
+    max-width: 551px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    font-size: 40px;
+    line-height: 45px;
+    display: inline-block;
+    font-family: 'Integral CF';
+    color: #fff;
+    text-align: left;
+}
+
+
+.company-help-boxes {
+    gap: 135px;
+}
+
+.footer-title-box {
+    max-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.all-link-boxes {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.footer-rights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 
 }
