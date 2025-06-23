@@ -118,24 +118,40 @@ ul li {
 
 /* burger-bar */
 
-/* .burger {
-    width: 30px;
-    height: 22px;
+#burger {
+    width: 25px;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
-    z-index: 1001;
+    height: 18px;
 }
   
-.burger span {
+#burger span {
     display: none;
     height: 4px;
     background: #000;
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
-} */
+}
+  
+#menu {
+    display: none;
+    background-color: #444;
+    padding: 15px;
+}
+  
+#menu.active {
+    display: block;
+}
+  
+#menu a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 10px 0;
+}
 
 /* ------------- */
 
@@ -1033,6 +1049,7 @@ main {
 @media (max-width: 1060px) and (min-width: 800px) {
     /* header */
 .header-box {
+        position: sticky;
         max-width: 100%;
         margin: auto;
         margin-top: 24px;
@@ -1051,54 +1068,85 @@ main {
 
 /* burger-bar */
 
-/* .burger span {
+#burger {
+    width: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+    position: relative;
+    z-index: 1001;
+}
+  
+#burger span {
     display: block;
     height: 4px;
     background: #000;
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
-} */
+}
+
+#burger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#burger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
 
 .navigation {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out;
+    z-index: 999;
+    padding: 0 20px;
 }
 
 .navigation.active {
-    display: flex;
-    flex-direction: column;
-
-    position: absolute;
-    top: 96px;
-    margin: 0 auto;
-    width: 100%;
-    max-height: 300px;
-    background-color: #fff;
-    z-index: 1000;
+    max-height: 500px;
+    padding-bottom: 20px;
 }
-
 
 .navigation ul {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
     list-style: none;
-    padding: 0 !important;
-
+    padding: 0;
     margin: 0;
+    width: 100%;
 }
-  
+
 .navigation ul li {
-    margin-right: 24px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
     font-family: 'Satoshi', sans-serif;
 }
-  
-.navigation li a:hover {
-    text-decoration: underline;
-}
 
+.navigation ul li a:hover {
+    background-color: #f0f0f0;
+}
 
 /* info and title boxes */
 
@@ -1329,6 +1377,87 @@ main {
     .navigation {
         display: none;
     }
+
+    #burger {
+        width: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18px;
+        position: relative;
+        z-index: 1001;
+    }
+      
+    #burger span {
+        display: block;
+        height: 4px;
+        background: #000;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+    
+    #burger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    #burger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #burger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    
+.navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out;
+    z-index: 999;
+    padding: 0 20px;
+}
+
+.navigation.active {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.navigation ul li a:hover {
+    background-color: #f0f0f0;
+}
 
     .hero-section {
         padding-top: 96px;
@@ -1579,4 +1708,9 @@ main {
     .faq-resources-boxes {
         gap: 60px;
     }
+}
+
+@media (max-width: 600px) and (min-width: 320px) {
+    /* header */
+
 }
