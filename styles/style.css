@@ -8,6 +8,10 @@
     outline: 1px solid red;
 } */
 
+html, body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -59,7 +63,7 @@ ul {
 
 ul li {
     margin-right: 24px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
 }
 
 .search-box {
@@ -80,7 +84,7 @@ ul li {
     text-align: left;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.4);
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
 }
 
 .search-box img {
@@ -112,6 +116,26 @@ ul li {
     top: 2px;
 }
 
+/* burger-bar */
+
+/* .burger {
+    width: 30px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+  
+.burger span {
+    display: none;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+} */
 
 /* ------------- */
 
@@ -196,7 +220,7 @@ main {
     position: relative;
     font-size: clamp(14px, 1.11vw, 16px);
     line-height: 1.2;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
     display: inline-block;
@@ -219,7 +243,7 @@ main {
     text-align: left;
     font-size: clamp(14px, 1.1vw, 16px);
     color: #fff;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
 
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
@@ -242,7 +266,7 @@ main {
     position: relative;
     font-size: clamp(14px, 1.2vw, 16px);
     line-height: 1.4;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
 
@@ -354,7 +378,7 @@ main {
     position: relative;
     font-size: 20px;
     display: inline-block;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
     font-weight: bold;
     color: #000;
     text-align: left;
@@ -363,7 +387,7 @@ main {
 .clothes-price {
     position: relative;
     font-size: 24px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi', sans-serif;
     color: #000;
     text-align: left;
 }
@@ -379,7 +403,7 @@ main {
 .raiting-num {
     position: relative;
     font-size: 14px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
     text-align: left;
     color: #000;
     color: rgba(0, 0, 0, 0.6);
@@ -408,16 +432,16 @@ main {
     text-align: left;
     font-size: 16px;
     color: #000;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
 
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
 .view-all-parent button:hover {
-    transform: translateY(-2px); /* лёгкое приподнятие */
-    border-color: rgba(0, 0, 0, 0.2); /* чуть ярче граница */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); /* мягкая тень */
+    transform: translateY(-2px);
+    border-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .line2-div {
@@ -472,7 +496,7 @@ main {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-inline: clamp(16px, 5vw, 80px); /* адаптивные отступы слева и справа */
+  padding-inline: clamp(16px, 5vw, 80px);
   box-sizing: border-box;
 }
 
@@ -638,7 +662,7 @@ main {
     position: relative;
     font-size: 16px;
     line-height: 22px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
     display: inline-block;
@@ -707,7 +731,7 @@ main {
     text-align: left;
     font-size: 16px;
     color: rgba(0, 0, 0, 0.4);
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
 }
 
 .subscribe-button button{
@@ -725,7 +749,7 @@ main {
     text-align: left;
     font-size: 16px;
     color: #000;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
 }
 
 .footer-first-box{
@@ -761,7 +785,7 @@ main {
     position: relative;
     font-size: 14px;
     line-height: 22px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
     display: inline-block;
@@ -782,7 +806,7 @@ main {
     position: relative;
     font-size: 16px;
     line-height: 40px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi Light', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: left;
 }
@@ -850,10 +874,10 @@ main {
 
 
 .rights-text {
-    width: 269px;
+    width: 300px;
     position: relative;
     font-size: 14px;
-    font-family: 'Satoshi';
+    font-family: 'Satoshi', sans-serif;
     color: rgba(0, 0, 0, 0.6);
     text-align: right;
     display: inline-block;
@@ -1020,13 +1044,61 @@ main {
         gap: 20px;
 }
 
-.navigation {
-        display: none;
-}
 
 .search-box {
     max-width: 400px;
 }
+
+/* burger-bar */
+
+/* .burger span {
+    display: block;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+} */
+
+.navigation {
+    display: none;
+}
+
+.navigation.active {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 96px;
+    margin: 0 auto;
+    width: 100%;
+    max-height: 300px;
+    background-color: #fff;
+    z-index: 1000;
+}
+
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    list-style: none;
+    padding: 0 !important;
+
+    margin: 0;
+}
+  
+.navigation ul li {
+    margin-right: 24px;
+    font-family: 'Satoshi', sans-serif;
+}
+  
+.navigation li a:hover {
+    text-decoration: underline;
+}
+
 
 /* info and title boxes */
 
@@ -1056,6 +1128,7 @@ main {
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
@@ -1238,6 +1311,272 @@ main {
     transform: translateY(-3px);
 }
 
+}
+
+/* media 800-600 */
+
+@media (max-width: 800px) and (min-width: 600px) {
+    header{
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .header-box {
+        max-width: 600px;
+        width: 100%;
+    }
+    
+    .navigation {
+        display: none;
+    }
+
+    .hero-section {
+        padding-top: 96px;
+        padding-bottom: 100px;
+        background-color: #F2F0F1;
+    }
+ 
+    .body-image img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 100px;
+    }
+
+    /* info and title boxes */
+
+    .title {
+        max-width: 70%;
+        font-size: clamp(24px, 5vw, 48px);
+        bottom: 10px;
+    }
+
+    .title-new-arrivals {
+        display: block;
+    }
+
+    .browse-by-dress-parent-box {
+        display: none;
+    }
+
+    
+    .subtitle {
+        max-width: 60%;
+        font-size: clamp(14px, 2vw, 16px);
+        bottom: 10px;
+    }
+
+    .shop-now-button {
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .line-div {
+        display: none;
+    }
+
+    .info-box {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .box {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(20px, 4vw, 40px);
+
+    }
+
+    .brands {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-evenly;
+    }
 
 
+    .new-arrivals {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .top-selling {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+    }
+
+
+    .revision-second-box, .revision-third-box {
+        display: none;
+    }
+    
+    .revision-first-box {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding: 28px 32px;
+        gap: 19px;
+    }
+    
+    .title-and-arrows {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        gap: 0; 
+    }
+    
+    .our-happy-customers-title {
+        margin: 0;
+        padding: 0; 
+        position: relative;
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+        font-size: 48px;
+        line-height: 36px;
+        display: flex;
+        font-family: 'Integral CF';
+        color: #000;
+        text-align: left;
+    }
+    
+    .arrows {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 100px;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .footer-top-box, .footer-top-title, .email-and-button {
+        width: 90%;
+    }
+    
+    .email-and-button {
+        width: 100%;
+        max-width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .footer-top-title {
+        max-width: 551px;
+        height: auto;
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+        line-height: 45px;
+        display: inline-block;
+        font-family: 'Integral CF';
+        color: #fff;
+        text-align: left;
+    }
+    
+    
+    .company-help-boxes {
+        gap: 135px;
+    }
+    
+    .footer-title-box {
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
+        margin-top: 25px;
+    }
+    
+    .all-link-boxes {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    
+    .footer-rights {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .shop-now-button button {
+        width: clamp(160px, 30%, 210px);
+        position: relative;
+        border-radius: 4rem;
+        background-color: #000;
+        height: clamp(40px, 6vw, 52px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(10px, 2vw, 16px) clamp(24px, 5vw, 54px);
+        box-sizing: border-box;
+        text-align: left;
+        font-size: clamp(14px, 1.1vw, 16px);
+        color: #fff;
+        font-family: 'Satoshi', sans-serif;
+    
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .shop-now-button button:hover {
+        background-color: #000000;
+        transform: translateY(-3px);
+    }
+
+    .footer-top-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-first-box {
+        padding-top: 100px;
+    }
+
+    .company-help-boxes {
+        gap: 60px;
+    }
+
+    .faq-resources-boxes {
+        gap: 60px;
+    }
 }
