@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Satoshi Light', sans-serif;
+}
+
+form, h1, span, p {
+    font-family: 'Satoshi Light', sans-serif;
 }
 
 body{
@@ -27,7 +29,6 @@ body{
     width: 90%;
     max-height: 700px;
     height: 90%;
-    border: 1px red solid;
 }
 
 .container p{
@@ -211,46 +212,21 @@ body{
     transform: translateX(200%);
 }
 
-@media (max-width: 600px) {
-    
-    .container {
-        width: 90%;
-        min-height: 500px;
-        border-radius: 20px;
-    }
+.back-arrow {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #333;
+    z-index: 1000;
+    cursor: pointer;
+}
 
-    .toggle-container {
-        display: none;
-    }
 
-    .form-container {
-        position: relative;
-        width: 100%;
-        height: auto;
-        transform: translateX(0) !important;
-        opacity: 1 !important;
-        z-index: 5 !important;
-    }
 
-    .sign-in,
-    .sign-up {
-        width: 100%;
-        transform: translateX(0) !important;
-        opacity: 1 !important;
-        z-index: 5 !important;
-        animation: none;
-    }
-
-    .container.active .sign-in,
-    .container.active .sign-up {
-        transform: translateX(0) !important;
-    }
-
-    .toggle {
-        display: none;
-    }
-
-    .container form {
-        padding: 20px;
+@media (max-width: 1060px) {
+    .back-arrow {
+        display: block;
     }
 }
