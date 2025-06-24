@@ -8,6 +8,22 @@
     outline: 1px solid red;
 } */
 
+
+.fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
 html, body {
     overflow-x: hidden;
 }
@@ -1712,5 +1728,5 @@ main {
 
 @media (max-width: 600px) and (min-width: 320px) {
     /* header */
-
+    
 }
