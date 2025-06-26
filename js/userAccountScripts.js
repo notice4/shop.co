@@ -160,5 +160,49 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// 
+// Fetching and displaying a specific text from a privacy policy page
 
+fetch(`https://api.allorigins.win/get?url=https://www.freeprivacypolicy.com/live/c8a4bd6b-57ac-4a13-866a-8b5320c77e8f`)
+  .then(response => response.json())
+  .then(data => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data.contents, 'text/html');
+
+    // Finding the specific text in the document
+    const paragraphs = doc.querySelectorAll('p');
+    let targetText = '';
+
+    paragraphs.forEach(p => {
+      if (p.textContent.includes('We use Your Personal data to provide and improve the Service')) {
+        targetText = p.textContent;
+      }
+    });
+
+    const container = document.querySelector('.policy-container');
+
+    if (targetText) {
+      container.innerText = targetText;
+
+      // Creating a link to the full document
+      const link = document.createElement('a');
+      link.href = 'https://www.freeprivacypolicy.com/live/c8a4bd6b-57ac-4a13-866a-8b5320c77e8f';
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = 'Read the full Privacy Policy';
+      link.style.display = 'block';
+      link.style.marginTop = '15px';
+      link.style.color = '#007BFF';
+      link.style.textDecoration = 'none';
+      link.onmouseover = () => link.style.textDecoration = 'underline';
+      link.onmouseout = () => link.style.textDecoration = 'none';
+
+      container.appendChild(link);
+
+    } else {
+      container.innerText = 'Text not found';
+    }
+  })
+  .catch(err => {
+    console.error(err);
+    document.querySelector('.policy-container').innerText = 'Error fetching the privacy policy text';
+});

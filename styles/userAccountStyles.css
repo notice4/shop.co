@@ -14,12 +14,13 @@ body{
     background: linear-gradient(to right, #ffffff, #F5F5F5);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
-    height: 100vh;
+    height: 850px;
 }
 
 .container{
+    margin-top: 20px;
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -221,6 +222,21 @@ body{
     color: #333;
     z-index: 1000;
     cursor: pointer;
+}
+
+.policy-container {
+    font-family: 'Satoshi Light', sans-serif;
+    font-weight: 300;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 1300px;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    line-height: 1.6;
 }
 
 
