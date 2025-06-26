@@ -185,6 +185,10 @@ ul li {
     display: block;
 }
 
+.small-image, .small-star-big, .small-star-small{
+    display: none;
+}
+
 main {
     position: relative;
     width: 100%;
@@ -1726,7 +1730,921 @@ main {
     }
 }
 
-@media (max-width: 600px) and (min-width: 320px) {
-    /* header */
+@media (max-width: 599px) and (min-width: 480px) {
+    header{
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .header-box {
+        max-width: 320px;
+        width: 100%;
+    }
     
+    .navigation {
+        display: none;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .brands {
+        display: none;
+    }
+
+    #burger {
+        width: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18px;
+        position: relative;
+        z-index: 1001;
+    }
+      
+    #burger span {
+        display: block;
+        height: 4px;
+        background: #000;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+    
+    #burger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    #burger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #burger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    
+.navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out;
+    z-index: 999;
+    padding: 0 20px;
+}
+
+.navigation.active {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.navigation ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+    .small-star-big, .small-star-small{
+        display: block;
+    }
+
+    .small-star-big img {
+        position: absolute;
+        top: 450px;
+        left: 380px;
+    }
+
+    .small-star-small img {
+        position: absolute;
+        top: 620px;
+        left: 50px;
+    }
+
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        background-color: #F2F0F1;
+    }
+ 
+    .body-image img{
+        display: none;
+    }
+
+    .small-image{
+        display: block;
+        bottom: 30px;
+    }
+
+    .small-image img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 350px;
+    }
+
+    /* info and title boxes */
+
+    .title {
+        max-width: 90%;
+        font-size: clamp(24px, 5vw, 60px);
+        bottom: 100px;
+        margin: 0 auto;
+    }
+
+    .title-new-arrivals {
+        display: block;
+    }
+
+    .browse-by-dress-parent-box {
+        display: none;
+    }
+
+    .subtitle {
+        max-width: 90%;
+        font-size: clamp(14px, 2vw, 20px);
+        bottom: 100px;
+        margin: 0 auto;
+    }
+
+    .shop-now-button {
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        bottom: 100px;
+        left: 25px;
+    }
+
+    .line-div {
+        display: block;
+    }
+
+    .info-box {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+        bottom: 110px;
+        padding: 10px;
+    }
+
+    .box {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(40px, 4vw, 60px);
+    }
+
+
+    .brands {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+
+    .new-arrivals {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+        margin-right: 0px;
+    }
+
+    .top-selling {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+    }
+
+
+    .revision-second-box, .revision-third-box {
+        display: none;
+    }
+
+    .revisions {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    
+    .revision-first-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 24px;
+        text-align: left;
+        font-size: 16px;
+        color: #000;
+        font-family: 'Satoshi', sans-serif;
+    }
+
+    .our-happy-customers-title {
+        width: 286px;
+        position: relative;
+        font-size: 32px;
+        line-height: 36px;
+        display: flex;
+        margin: 0 auto;
+        font-family: 'Integral CF';
+        color: #000;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .title-and-arrows {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        gap: 0; 
+    }
+    
+    .arrows {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 100px;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .footer-top-box, .email-and-button {
+        width: 90%;
+    }
+
+    .footer-top-title {
+        max-width: 551px;
+        height: auto;
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+        line-height: 45px;
+        display: inline-block;
+        font-family: 'Integral CF';
+        color: #fff;
+        text-align: left;
+    }
+    
+    .email-input input{
+        width: 100%;
+        position: relative;
+        border-radius: 62px;
+        background-color: #fff;
+        height: 42px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 80px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 14px;
+        color: #000;
+        font-family: 'Satoshi Light', sans-serif;
+    }
+
+    .subscribe-button button{
+        width: 100%;
+        position: relative;
+        border-radius: 62px;
+        background-color: #fff;
+        height: 42px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 80px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+        font-family: 'Satoshi Light', sans-serif;
+    }
+    
+    .footer-top-title {
+        max-width: 551px;
+        height: auto;
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+        line-height: 45px;
+        display: inline-block;
+        font-family: 'Integral CF';
+        color: #fff;
+        text-align: left;
+    }
+    
+    
+    .company-help-boxes {
+        gap: 135px;
+    }
+    
+    .footer-title-box {
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    
+    .all-link-boxes {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-left: 40px;
+        margin-top: 100px;
+    }
+    
+    .footer-rights {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    .payments-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    .shop-now-button button {
+        width: clamp(160px, 30%, 210px);
+        position: relative;
+        border-radius: 4rem;
+        background-color: #000;
+        height: clamp(40px, 6vw, 52px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(10px, 2vw, 16px) clamp(24px, 5vw, 54px);
+        box-sizing: border-box;
+        text-align: left;
+        font-size: clamp(14px, 1.1vw, 16px);
+        color: #fff;
+        font-family: 'Satoshi', sans-serif;
+    
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .shop-now-button button:hover {
+        background-color: #000000;
+        transform: translateY(-3px);
+    }
+
+    .footer-top-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-first-box {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .company-help-boxes {
+        gap: 60px;
+    }
+
+    .faq-resources-boxes {
+        gap: 60px;
+    }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+    header{
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .header-box {
+        max-width: 320px;
+        width: 100%;
+    }
+    
+    .navigation {
+        display: none;
+    }
+
+    .search-box {
+        display: none;
+    }
+
+    .brands {
+        display: none;
+    }
+
+    #burger {
+        width: 25px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 18px;
+        position: relative;
+        z-index: 1001;
+    }
+      
+    #burger span {
+        display: block;
+        height: 4px;
+        background: #000;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+    
+    #burger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    #burger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    #burger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    
+.navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease-in-out;
+    z-index: 999;
+    padding: 0 20px;
+}
+
+.navigation.active {
+    max-height: 500px;
+    padding-bottom: 20px;
+}
+
+.navigation ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.navigation ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+    .small-star-big, .small-star-small{
+        display: block;
+    }
+
+    .small-star-big img {
+        position: absolute;
+        top: 450px;
+        left: 300px;
+    }
+
+    .small-star-small img {
+        position: absolute;
+        top: 620px;
+        left: 20px;
+    }
+
+    .hero-section {
+        padding-top: 50px;
+        padding-bottom: 0px;
+        background-color: #F2F0F1;
+    }
+ 
+    .body-image img{
+        display: none;
+    }
+
+    .small-image{
+        display: block;
+        bottom: 30px;
+    }
+
+    .small-image img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 350px;
+    }
+
+    /* info and title boxes */
+
+    .title {
+        max-width: 90%;
+        font-size: clamp(24px, 5vw, 60px);
+        bottom: 100px;
+        margin: 0 auto;
+    }
+
+    .title-new-arrivals {
+        display: block;
+    }
+
+    .browse-by-dress-parent-box {
+        display: none;
+    }
+
+    .subtitle {
+        max-width: 90%;
+        font-size: clamp(14px, 2vw, 20px);
+        bottom: 100px;
+        margin: 0 auto;
+    }
+
+    .shop-now-button {
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        bottom: 100px;
+        left: 25px;
+    }
+
+    .line-div {
+        display: none;
+    }
+
+    .info-box {
+        max-width: 500px;
+        width: 100%;
+        display: flex;
+        margin: 0 auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+        bottom: 110px;
+        padding: 10px;
+    }
+
+    .box {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: clamp(40px, 4vw, 60px);
+    }
+
+
+    .brands {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+
+
+    .new-arrivals {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+        margin-right: 0px;
+    }
+
+    .top-selling {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+    }
+
+
+    .revision-second-box, .revision-third-box {
+        display: none;
+    }
+
+    .revisions {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+    
+    .revision-first-box {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 24px;
+        text-align: left;
+        font-size: 16px;
+        color: #000;
+        font-family: 'Satoshi', sans-serif;
+    }
+
+    .our-happy-customers-title {
+        width: 286px;
+        position: relative;
+        font-size: 32px;
+        line-height: 36px;
+        display: flex;
+        margin: 0 auto;
+        font-family: 'Integral CF';
+        color: #000;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .title-and-arrows {
+        position: relative;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0;
+        gap: 0; 
+    }
+    
+    .arrows {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        max-width: 100px;
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .footer-top-box, .email-and-button {
+        width: 90%;
+    }
+
+    .footer-top-title {
+        max-width: 551px;
+        height: auto;
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+        line-height: 45px;
+        display: inline-block;
+        font-family: 'Integral CF';
+        color: #fff;
+        text-align: left;
+    }
+    
+    .email-input input{
+        width: 100%;
+        position: relative;
+        border-radius: 62px;
+        background-color: #fff;
+        height: 42px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 80px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 14px;
+        color: #000;
+        font-family: 'Satoshi Light', sans-serif;
+    }
+
+    .subscribe-button button{
+        width: 100%;
+        position: relative;
+        border-radius: 62px;
+        background-color: #fff;
+        height: 42px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 80px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 14px;
+        color: #000;
+        font-family: 'Satoshi Light', sans-serif;
+    }
+    
+    .footer-top-title {
+        max-width: 551px;
+        height: auto;
+        width: 100%;
+        position: relative;
+        font-size: 40px;
+        line-height: 45px;
+        display: inline-block;
+        font-family: 'Integral CF';
+        color: #fff;
+        text-align: left;
+    }
+    
+    
+    .company-help-boxes {
+        gap: 135px;
+    }
+    
+    .footer-title-box {
+        max-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    
+    .all-link-boxes {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin: 0 auto;
+        margin-top: 100px;
+    }
+    
+    .footer-rights {
+        max-width: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .payments-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 0px;
+    }
+    
+    .shop-now-button button {
+        width: clamp(160px, 30%, 210px);
+        position: relative;
+        border-radius: 4rem;
+        background-color: #000;
+        height: clamp(40px, 6vw, 52px);
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(10px, 2vw, 16px) clamp(24px, 5vw, 54px);
+        box-sizing: border-box;
+        text-align: left;
+        font-size: clamp(14px, 1.1vw, 16px);
+        color: #fff;
+        font-family: 'Satoshi', sans-serif;
+    
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .shop-now-button button:hover {
+        background-color: #000000;
+        transform: translateY(-3px);
+    }
+
+    .footer-top-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer-first-box {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .company-help-boxes {
+        gap: 60px;
+    }
+
+    .faq-resources-boxes {
+        gap: 60px;
+    }
 }
