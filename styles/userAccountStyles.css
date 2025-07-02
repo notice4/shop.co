@@ -239,6 +239,46 @@ body{
     line-height: 1.6;
 }
 
+.password-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.password-toggle label {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.input-with-toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+.input-with-toggle-container input[type="password"],
+.input-with-toggle-container input[type="text"] {
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.error-text {
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
 
 
 @media (max-width: 1060px) {

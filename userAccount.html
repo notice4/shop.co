@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/userAccountStyles.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script defer src="js/userAccountScripts.js"></script>
     <title>UserAccountTryPage</title>
 </head>
@@ -19,7 +20,7 @@
             <i class="fa-solid fa-arrow-left"></i>
         </div>
         <div class="form-container sign-up">
-            <form>
+            <form id="registrationForm">
                 <h1>Create Account</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -30,16 +31,24 @@
                 <span>or use your email for registeration</span>
 
                 <input type="text" name="username" id="usernamefield" placeholder="Username"/>
-                <p class="error-text" id="error-username"></p>
+                <p class="error-text" id="error-username" style="color: red"></p>
 
                 <input type="email" id="email" name="emailfield" placeholder="Email" />
-                <p id="email-error"></p>
+                <p id="email-error" style="color: red"></p>
 
-                <input type="password" name="password" id="passwordfield" placeholder="Password"/>
-                <p class="error-text" id="error-password"></p>
-
-                <input type="password" name="password2" id="passwordfield2" placeholder="Repeat Password"/>
-                <p class="error-text" id="error-password2"></p>
+                <label style="width: 100%; display: flex; align-items: center;">
+                    <input type="password" name="password" id="passwordfield" placeholder="Password"/>
+                    <input type="checkbox" id="showPasswordToggle" style="width: 30px; margin-left: 5px;"/>
+                    <span style="margin-left: 3px;">Show Password</span>
+                </label>
+                <p class="error-text" id="error-password" style="color: red"></p>
+                
+                <label style="width: 100%; display: flex; align-items: center;">
+                    <input type="password" name="password2" id="passwordfield2" placeholder="Repeat Password"/>
+                    <input type="checkbox" id="showPasswordToggle2" style="width: 30px; margin-left: 5px;"/>
+                    <span style="margin-left: 3px;">Show Password</span>
+                </label>
+                <p class="error-text" id="error-password2" style="color: red"></p>
 
                 <button>Sign Up</button>
             </form>
@@ -56,10 +65,14 @@
                 <span>or use your email password</span>
 
                 <input type="email" id="email" name="emailfield" placeholder="Email" />
-                <p id="email-error"></p>
+                <p id="email-error" style="color: red"></p>
 
-                <input type="password" name="password" id="passwordfield" placeholder="Password"/>
-                <p class="error-text" id="error-password"></p>
+                <label style="width: 100%; display: flex; align-items: center;">
+                    <input type="password" name="password" id="passwordfield3" placeholder="Password"/>
+                    <input type="checkbox" id="showPasswordToggle3" style="width: 30px; margin-left: 5px;"/>
+                    <span style="margin-left: 3px;">Show Password</span>
+                </label>
+                <p class="error-text" id="error-password" style="color: red"></p>
 
                 <a href="#">Forget Your Password?</a>
                 <button>Sign In</button>
