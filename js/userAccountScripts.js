@@ -163,7 +163,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // Fetching and displaying a specific text from a privacy policy page
 
 fetch(`https://api.allorigins.win/get?url=https://www.freeprivacypolicy.com/live/c8a4bd6b-57ac-4a13-866a-8b5320c77e8f`)
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
   .then(data => {
     const parser = new DOMParser();
     const doc = parser.parseFromString(data.contents, 'text/html');
@@ -205,4 +210,4 @@ fetch(`https://api.allorigins.win/get?url=https://www.freeprivacypolicy.com/live
   .catch(err => {
     console.error(err);
     document.querySelector('.policy-container').innerText = 'Error fetching the privacy policy text';
-});
+  });
